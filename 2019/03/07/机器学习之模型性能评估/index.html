@@ -16,17 +16,23 @@
   <title>机器学习之模型性能评估 | xuwenying_blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
+  <meta name="keywords" content="机器学习, machine learning, 模型性能评估, 准确率/精确率">
   
   
   
-  <meta property="og:type" content="article">
+  
+  <meta name="description" content="TP与TN都是分对了情况，TP是正类，TN是负类。则推断出，FP是把错的分成了对的，而FN则是把对的分成了错的。【举例】一个班里有男女生，我们来进行分类，把女生看成正类，男生看成是负类。我们可以用混淆矩阵来描述TP、TN、FP、FN。 相关（Relevant），正类    无关（NonRelevant），负类 被检索到（Retrieved）    True Positives（TP，正类判定为正类">
+<meta name="keywords" content="机器学习, machine learning, 模型性能评估, 准确率&#x2F;精确率">
+<meta property="og:type" content="article">
 <meta property="og:title" content="机器学习之模型性能评估">
 <meta property="og:url" content="http://yoursite.com/2019/03/07/机器学习之模型性能评估/index.html">
 <meta property="og:site_name" content="xuwenying_blog">
+<meta property="og:description" content="TP与TN都是分对了情况，TP是正类，TN是负类。则推断出，FP是把错的分成了对的，而FN则是把对的分成了错的。【举例】一个班里有男女生，我们来进行分类，把女生看成正类，男生看成是负类。我们可以用混淆矩阵来描述TP、TN、FP、FN。 相关（Relevant），正类    无关（NonRelevant），负类 被检索到（Retrieved）    True Positives（TP，正类判定为正类">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-07T12:18:13.916Z">
+<meta property="og:updated_time" content="2019-03-07T12:22:52.414Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习之模型性能评估">
+<meta name="twitter:description" content="TP与TN都是分对了情况，TP是正类，TN是负类。则推断出，FP是把错的分成了对的，而FN则是把对的分成了错的。【举例】一个班里有男女生，我们来进行分类，把女生看成正类，男生看成是负类。我们可以用混淆矩阵来描述TP、TN、FP、FN。 相关（Relevant），正类    无关（NonRelevant），负类 被检索到（Retrieved）    True Positives（TP，正类判定为正类">
   
     <link rel="alternate" href="/atom.xml" title="xuwenying_blog" type="application/atom+xml">
   
@@ -190,12 +196,18 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>TP与TN都是分对了情况，TP是正类，TN是负类。则推断出，FP是把错的分成了对的，而FN则是把对的分成了错的。<br>【举例】一个班里有男女生，我们来进行分类，把女生看成正类，男生看成是负类。我们可以用混淆矩阵来描述TP、TN、FP、FN。</p>
+<pre><code>相关（Relevant），正类    无关（NonRelevant），负类
+</code></pre><p>被检索到（Retrieved）    True Positives（TP，正类判定为正类。即女生是女生）    False Positives（FP，负类判定为正类，即“存伪”。男生判定为女生）<br>未被检索到（Not Retrieved）    False Negatives（FN，正类判定为负类，即“去真”。女生判定为男生）    True Negatives（TN，负类判定为负类。即男生判定为男生）<br>准确率：accuracy_score    所有的预测正确（正类负类）的占总的比重。accuracy_score=(TP+TN)/(TP+TN+FP+FN)；<br>精确率：precision_score   正确预测为正的占全部预测为正的比例。即查准率 precision_score=TP/(TP+FP)；<br>召回率：recall_score  正确预测为正的占全部实际为正的比例。即查全率 recall_score=TP/(TP+FN)；<br>均方误差：mean_squared_error  衡量“平均误差”的一种较方便的方法。是参数估计值与参数真值之差的平方的期望值（均值）。常运用在信号处理的滤波算法（最小均方差）中，表示此时观测值observed与估计值 predicted之间的偏差。；<br>可释方差：explained_variance_score；<br>R方值：r2_score。</p>
+
       
     </div>
     <footer class="entry-meta entry-footer">
       
       
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习-machine-learning-模型性能评估-准确率-精确率/">机器学习, machine learning, 模型性能评估, 准确率/精确率</a></li></ul>
+
       
         <div id="donation_div"></div>
 
