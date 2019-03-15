@@ -187,7 +187,7 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>TP与TN都是分对了情况，TP是正类，TN是负类。则推断出，FP是把错的分成了对的，而FN则是把对的分成了错的。<br>【举例】一个班里有男女生，我们来进行分类，把女生看成正类，男生看成是负类。我们可以用混淆矩阵来描述TP、TN、FP、FN。</p>
+        <p>H1 : 选择正确分类指标<br>TP与TN都是分对了情况，TP是正类，TN是负类。则推断出，FP是把错的分成了对的，而FN则是把对的分成了错的。<br>【举例】一个班里有男女生，我们来进行分类，把女生看成正类，男生看成是负类。我们可以用混淆矩阵来描述TP、TN、FP、FN。</p>
 <table>
 <thead>
 <tr>
@@ -209,7 +209,8 @@ var themeMenus = {};
 </tr>
 </tbody>
 </table>
-<p>准确率：accuracy_score    所有的预测正确（正类负类）的占总的比重。accuracy_score=(TP+TN)/(TP+TN+FP+FN)；<br>精确率：precision_score   正确预测为正的占全部预测为正的比例。即查准率 precision_score=TP/(TP+FP)；<br>召回率：recall_score  正确预测为正的占全部实际为正的比例。即查全率 recall_score=TP/(TP+FN)；<br>均方误差：mean_squared_error  衡量“平均误差”的一种较方便的方法。是参数估计值与参数真值之差的平方的期望值（均值）。常运用在信号处理的滤波算法（最小均方差）中，表示此时观测值observed与估计值 predicted之间的偏差。；<br>可释方差：explained_variance_score；<br>R方值：r2_score。</p>
+<p>准确率：accuracy_score    所有的预测正确（正类负类）的占总的比重。accuracy_score=(TP+TN)/(TP+TN+FP+FN)；<br>精确率：precision_score   正确预测为正的占全部预测为正的比例。即查准率 precision_score=TP/(TP+FP)；<br>召回率：recall_score  正确预测为正的占全部实际为正的比例。即查全率 recall_score=TP/(TP+FN)；</p>
+<p>H1 : 选择正确回归指标<br>均方误差：mean_squared_error  衡量“平均误差”的一种较方便的方法。是参数估计值与参数真值之差的平方的期望值（均值），并在所有的数据点上取平均值。常运用在信号处理的滤波算法（最小均方差）中，表示此时观测值observed与估计值 predicted之间的偏差。；<br>可释方差：explained_variance_score 计算一个模型可以解释测试数据的方差或者离散度的程度（sklearn.metrics.explained_variance_score）.一般来说，可释方差的值使用相关系数来计算。<br>R方值：r2_score 与可释方差密切相关，但它使用的是一个无偏方差估计（sklearn.metrics.r2_score），它也叫作决定系数。</p>
 
       
     </div>
